@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    margin: 25%;
+}
+
+#container>div{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.change-color {
+    background: black;
+}
