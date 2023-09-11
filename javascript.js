@@ -19,5 +19,8 @@ function createGrid(){
 
 }
 
+function askGridSize() {
+    let size = prompt("Please enter how large you want the grid to be. Ex. 16 = a 16x16 grid. Max grid size = 100")
+}
 
 createGrid()

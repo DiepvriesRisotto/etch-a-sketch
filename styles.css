@@ -7,7 +7,7 @@ body {
 #container {
     width: 500px;
     height: 500px;
-    margin: 25%;
+    margin: 10%;
 }
 
 #container>div{
@@ -27,4 +27,8 @@ body {
 
 .change-color {
     background: black;
+}
+
+#grid-select{
+    margin: 50px;
 }
