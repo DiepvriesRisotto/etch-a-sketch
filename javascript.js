@@ -1,9 +1,15 @@
 const container = document.getElementById("container");
 
-function createGrid(){
-    for (let i = 0; i < 16 ; i++) {
+function standardGrid() {
+    createGrid(16);
+}
+
+standardGrid();
+
+function createGrid(size){
+    for (let i = 0; i < size ; i++) {
         const row = container.appendChild(document.createElement('div'));
-        for (let j = 0; j < 16; j++) {
+        for (let j = 0; j < size; j++) {
             const box = document.createElement('div');
             box.className = 'box';
             row.appendChild(box);
@@ -21,6 +27,17 @@ function createGrid(){
 
 function askGridSize() {
     let size = prompt("Please enter how large you want the grid to be. Ex. 16 = a 16x16 grid. Max grid size = 100")
+
+    if (size > 100) {
+        alert("Please enter a value that isn't greater than 100");
+    } else {
+        resetGrid();
+        createGrid(size);
+    }
 }
 
-createGrid()
+function resetGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
