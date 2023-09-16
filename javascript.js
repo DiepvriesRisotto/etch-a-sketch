@@ -18,13 +18,6 @@ function createGrid(size){
             box.style.height = `${height}px`;
         }
     }
-    /*const boxes = document.getElementsByClassName('box');
-
-    for (let i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener('mouseover', () => {
-        boxes[i].classList.toggle('change-color')
-    }); 
-}*/
 
 }
 
