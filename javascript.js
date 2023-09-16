@@ -13,6 +13,9 @@ function createGrid(size){
             const box = document.createElement('div');
             box.className = 'box';
             row.appendChild(box);
+            box.style.width = "100%";
+            let height = 500 / size;
+            box.style.height = `${height}px`;
         }
     }
     const boxes = document.getElementsByClassName('box');
