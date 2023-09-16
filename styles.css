@@ -8,6 +8,7 @@ body {
 #container {
     width: 500px;
     height: 500px;
+    margin: 10%;
     border: 1px solid red;
 }
 
@@ -25,10 +26,8 @@ body {
     border: 1px solid black;
 }
 
-.change-color {
-    background: black;
-}
-
-#grid-select{
+.buttons{
     margin: 50px;
+    display: flex;
+    gap: 10px;
 }

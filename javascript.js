@@ -18,13 +18,13 @@ function createGrid(size){
             box.style.height = `${height}px`;
         }
     }
-    const boxes = document.getElementsByClassName('box');
+    /*const boxes = document.getElementsByClassName('box');
 
     for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener('mouseover', () => {
         boxes[i].classList.toggle('change-color')
-    });
-}
+    }); 
+}*/
 
 }
 
@@ -42,5 +42,44 @@ function askGridSize() {
 function resetGrid() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
+    }
+}
+
+function activateBlack() {
+    clearGrid();
+    const boxes = document.getElementsByClassName('box');
+
+    for (let i = 0; i < boxes.length; i++) {           
+    boxes[i].addEventListener('mouseover', () => {
+        boxes[i].style.backgroundColor = 'rgb(' + 0 + ',' + 0 + ',' + 0 + ')';
+    }); 
+}
+
+}
+
+function activateRandomColors() {
+    clearGrid();
+    const boxes = document.getElementsByClassName('box');
+
+    for (i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener('mouseover', function(event) {
+            event.target.style.backgroundColor = getRandomRgb();            
+        });     
+    }
+}
+
+function getRandomRgb() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
+function clearGrid() {
+    const boxes = document.getElementsByClassName('box');
+
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].style.backgroundColor = 'rgb(' + 255 + ',' + 255 + ',' + 255 + ')';
     }
 }
